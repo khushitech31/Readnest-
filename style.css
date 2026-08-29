@@ -1,44 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
 body {
-    background-color: #f5f1e8;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 40px 20px;
+font-family: Arial, sans-serif;
+background: #f8f5ff;
+color: #29233d;
 }
 
-h1 {
-    color: #6b3e26;
-    font-size: 40px;
+/* Header */
+
+header {
+text-align: center;
+padding: 35px 15px;
+background: #6c4ab6;
+color: white;
 }
 
-p {
-    color: #555;
-    font-size: 18px;
+header h1 {
+font-size: 38px;
+margin-bottom: 8px;
 }
 
-h2 {
-    color: #333;
-    margin-top: 40px;
+header p {
+font-size: 17px;
 }
 
-div {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 25px;
+/* Main */
+
+main {
+max-width: 1000px;
+margin: auto;
+padding: 25px 15px;
 }
 
-button {
-    background-color: white;
-    border: none;
-    border-radius: 15px;
-    padding: 25px 30px;
-    font-size: 18px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Hero Section */
+
+.hero {
+text-align: center;
+padding: 35px 15px;
 }
 
-button:hover {
-    transform: translateY(-3px);
+.hero h2 {
+font-size: 28px;
+margin-bottom: 12px;
+}
+
+.hero p {
+max-width: 600px;
+margin: 0 auto 22px;
+line-height: 1.6;
+color: #625b72;
+}
+
+/* Search */
+
+.hero input {
+width: 90%;
+max-width: 550px;
+padding: 14px 18px;
+border: 2px solid #d8ccef;
+border-radius: 30px;
+font-size: 16px;
+outline: none;
+background: white;
+}
+
+.hero input:focus {
+border-color: #6c4ab6;
+}
+
+/* Categories */
+
+.categories {
+text-align: center;
+padding: 20px 0 40px;
+}
+
+.categories h2 {
+margin-bottom: 25px;
+font-size: 25px;
+}
+
+.category-container {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 18px;
+}
+
+.category {
+background: white;
+padding: 25px 15px;
+border-radius: 18px;
+text-decoration: none;
+color: #29233d;
+box-shadow: 0 5px 15px rgba(60, 40, 100, 0.10);
+transition: 0.3s;
+}
+
+.category:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 20px rgba(60, 40, 100, 0.18);
+}
+
+.category span {
+font-size: 38px;
+}
+
+.category h3 {
+margin: 12px 0 7px;
+font-size: 20px;
+}
+
+.category p {
+font-size: 14px;
+color: #777080;
+}
+
+/* Footer */
+
+footer {
+text-align: center;
+padding: 22px 10px;
+background: #29233d;
+color: white;
+font-size: 14px;
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+header h1 {
+    font-size: 32px;
+}
+
+.hero h2 {
+    font-size: 24px;
+}
+
+.category-container {
+    grid-template-columns: 1fr;
+}
+
 }
